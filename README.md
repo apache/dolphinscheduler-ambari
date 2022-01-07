@@ -1,8 +1,8 @@
-# Apache Ambari plugin of Apache DolphinScheduler
+# Apache Ambari plugin for Apache DolphinScheduler
 
-## ⚠️⚠️Important⚠️⚠️
+## ⚠️⚠️ Important ⚠️⚠️
 
-⚠️⚠️ **NOTE** ⚠️⚠️: Apache Ambari plugin only support installation DolphinScheduler for version 1.3.0 - 1.3.9.
+⚠️⚠️ **NOTE** ⚠️⚠️: Apache Ambari plugin only support installation DolphinScheduler for version **1.3.0 - 1.3.9**.
 The reason we split to this repo as below:
 
 * Ambari plug-in is a deployment plugin and not update for two years, and only support DolphinScheduler 1.3.x.
@@ -31,7 +31,7 @@ cd dolphinscheduler_${DOLPHINSCHEDULER_VERSION}_ambari
 mvn -U clean install  -Prpmbuild  -Dmaven.test.skip=true -X
 ```
 
-### Create an installation for DS，who have read and write access to the installation directory (/opt/soft)
+Create an installation for DS，who have read and write access to the installation directory (/opt/soft)
 
 ### Install with rpm package
 
@@ -66,81 +66,83 @@ GRANT ALL PRIVILEGES ON dolphinscheduler.* TO '{user}'@'localhost' IDENTIFIED BY
 flush privileges;
 ```
 
-## Ambari Install Dolphin Scheduler
+## Ambari Install Dolphin Scheduler(You have to install zookeeper first)
 
-**NOTE: You have to install zookeeper first**
-
-### Install  Dolphin Scheduler on ambari web interface
+* Install  Dolphin Scheduler on ambari web interface
 
 ![](https://github.com/apache/dolphinscheduler-website/blob/master/img/ambari-plugin/DS2_AMBARI_001.png)
 
-### Select the nodes for the Dolphin Scheduler's Master installation
+* Select the nodes for the Dolphin Scheduler's Master installation
 
 ![](https://github.com/apache/dolphinscheduler-website/blob/master/img/ambari-plugin/DS2_AMBARI_002.png)
 
-### Configure the Dolphin Scheduler's nodes for Worker, Api, Logger, Alert installation
+* Configure the Dolphin Scheduler's nodes for Worker, Api, Logger, Alert installation
 
 ![](https://github.com/apache/dolphinscheduler-website/blob/master/img/ambari-plugin/DS2_AMBARI_003.png)
 
-### Set the installation users of the Dolphin Scheduler service (created in step 1) and the user groups they belong to
+* Set the installation users of the Dolphin Scheduler service (created in step 1) and the user groups they belong to
 
 ![](https://github.com/apache/dolphinscheduler-website/blob/master/img/ambari-plugin/DS2_AMBARI_004.png)
 
-### System Env Optimization will export some system environment config. Modify according to actual situation
+* System Env Optimization will export some system environment config. Modify according to actual situation
 
 ![](https://github.com/apache/dolphinscheduler-website/blob/master/img/ambari-plugin/DS2_AMBARI_020.png)
 
-### Configure the database information (same as in the initialization database in step 1)
+* Configure the database information (same as in the initialization database in step 1)
 
 ![](https://github.com/apache/dolphinscheduler-website/blob/master/img/ambari-plugin/DS2_AMBARI_005.png)
 
-### Configure additional information if needed
+* Configure additional information if needed
 
 ![](https://github.com/apache/dolphinscheduler-website/blob/master/img/ambari-plugin/DS2_AMBARI_006.png)
 
 ![](https://github.com/apache/dolphinscheduler-website/blob/master/img/ambari-plugin/DS2_AMBARI_007.png)
 
-### Perform the next steps as normal
+* Perform the next steps as normal
 
 ![](https://github.com/apache/dolphinscheduler-website/blob/master/img/ambari-plugin/DS2_AMBARI_008.png)
 
-### The interface after successful installation
+* The interface after successful installation
 
 ![](https://github.com/apache/dolphinscheduler-website/blob/master/img/ambari-plugin/DS2_AMBARI_009.png)
 
 ------
 
-## Add components to the node through Ambari -- for example, add a DS Worker
+## Add components
+
+Add components to the node through Ambari -- for example, add a DS Worker
 
 ***NOTE***: DS Logger is the installation dependent component of DS Worker in Dolphin's Ambari installation
 (need to add installation first; Prevent the Job log on the corresponding Worker from being checked)
 
-### Locate the component node to add -- for example, node ark3
+*  Locate the component node to add -- for example, node ark3
 
 ![DS2_AMBARI_011](https://github.com/apache/dolphinscheduler-website/blob/master/img/ambari-plugin/DS2_AMBARI_011.png)
 
-### Add components -- the drop-down list is all addable
+* Add components -- the drop-down list is all addable
 
 ![DS2_AMBARI_012](https://github.com/apache/dolphinscheduler-website/blob/master/img/ambari-plugin/DS2_AMBARI_012.png)
 
-### Confirm component addition
+* Confirm component addition
 
 ![DS2_AMBARI_013](https://github.com/apache/dolphinscheduler-website/blob/master/img/ambari-plugin/DS2_AMBARI_013.png)
 
-### After adding DS Worker and DS Logger components
+* After adding DS Worker and DS Logger components
 
 ![DS2_AMBARI_015](https://github.com/apache/dolphinscheduler-website/blob/master/img/ambari-plugin/DS2_AMBARI_015.png)
 
-### Start the component
+* Start the component
 
 ![DS2_AMBARI_016](https://github.com/apache/dolphinscheduler-website/blob/master/img/ambari-plugin/DS2_AMBARI_016.png)
 
-## Remove the component from the node with Ambari
+## Remove components
 
-### Stop the component in the corresponding node
+Remove the component from the node with Ambari
+
+*  Stop the component in the corresponding node
 
 ![DS2_AMBARI_018](https://github.com/apache/dolphinscheduler-website/blob/master/img/ambari-plugin/DS2_AMBARI_018.png)
 
-### Remove components
+* Remove components
 
 ![DS2_AMBARI_019](https://github.com/apache/dolphinscheduler-website/blob/master/img/ambari-plugin/DS2_AMBARI_019.png)
