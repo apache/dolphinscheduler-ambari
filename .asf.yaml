@@ -16,12 +16,16 @@
 #
 
 github:
-  description: Apache Ambari plugin for Apache DolphinScheduler
+  description: Apache DolphinScheduler's Ambari plugin, deploy DolphinScheduler easier within Apache Ambari
   homepage: https://dolphinscheduler.apache.org/
   labels:
     - dolphinscheduler
     - deployment
     - ambari-plugin
+    - ambari
+  features:
+    issues: true
+  del_branch_on_merge: true
   enabled_merge_buttons:
     squash: true
     merge: false
