@@ -25,6 +25,7 @@ github:
     - ambari
   features:
     issues: true
+  del_branch_on_merge: true
   enabled_merge_buttons:
     squash: true
     merge: false
