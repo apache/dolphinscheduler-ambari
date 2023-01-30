@@ -18,20 +18,16 @@
     <property>
         <name>spring.datasource.url</name>
         <value>jdbc:mysql://127.0.0.1:3306/dolphinscheduler?useUnicode=true&amp;characterEncoding=UTF-8</value>
-        <description>
-            mysql url address
-        </description>
+        <on-ambari-upgrade add="true"/>
     </property>
     <property>
         <name>spring.datasource.username</name>
-        <value>ds_user</value>
-        <description>
-        </description>
+        <value>root</value>
+        <on-ambari-upgrade add="true"/>
     </property>
     <property>
         <name>spring.datasource.password</name>
-        <value>dolphinscheduler</value>
-        <description>
-        </description>
+        <value>123456</value>
+        <on-ambari-upgrade add="true"/>
     </property>
 </configuration>

@@ -18,27 +18,22 @@
 	<property>
 		<name>server.port</name>
 		<value>12345</value>
-		<description>
-			server port
-		</description>
-		<value-attributes>
-			<type>int</type>
-		</value-attributes>
+		<on-ambari-upgrade add="true"/>
 	</property>
 	<property>
 		<name>server.servlet.session.timeout</name>
 		<value>7200</value>
-		<value-attributes>
-			<type>int</type>
-		</value-attributes>
-		<description>
-		</description>
+		<on-ambari-upgrade add="true"/>
 	</property>
 	<property>
 		<name>server.servlet.context-path</name>
 		<value>/dolphinscheduler/</value>
-		<description>
-		</description>
+		<on-ambari-upgrade add="true"/>
+	</property>
+	<property>
+		<name>spring.jackson.time-zone</name>
+		<value>GMT+8</value>
+		<on-ambari-upgrade add="true"/>
 	</property>
 	<property>
 		<name>spring.servlet.multipart.max-file-size</name>
@@ -47,8 +42,7 @@
 			<unit>MB</unit>
 			<type>int</type>
 		</value-attributes>
-		<description>
-		</description>
+		<on-ambari-upgrade add="true"/>
 	</property>
 	<property>
 		<name>spring.servlet.multipart.max-request-size</name>
@@ -57,31 +51,36 @@
 			<unit>MB</unit>
 			<type>int</type>
 		</value-attributes>
-		<description>
-		</description>
+		<on-ambari-upgrade add="true"/>
+	</property>
+	<property>
+		<name>server.compression.enabled</name>
+		<value>true</value>
+		<on-ambari-upgrade add="true"/>
+	</property>
+	<property>
+		<name>server.compression.mime-types</name>
+		<value>text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json,application/xml</value>
+		<on-ambari-upgrade add="true"/>
 	</property>
 	<property>
 		<name>server.jetty.max-http-post-size</name>
 		<value>5000000</value>
-		<value-attributes>
-			<type>int</type>
-		</value-attributes>
-		<description>
-		</description>
+		<on-ambari-upgrade add="true"/>
 	</property>
 	<property>
 		<name>spring.messages.encoding</name>
 		<value>UTF-8</value>
-		<description></description>
+		<on-ambari-upgrade add="true"/>
 	</property>
 	<property>
 		<name>spring.messages.basename</name>
 		<value>i18n/messages</value>
-		<description></description>
+		<on-ambari-upgrade add="true"/>
 	</property>
 	<property>
 		<name>security.authentication.type</name>
 		<value>PASSWORD</value>
-		<description></description>
+		<on-ambari-upgrade add="true"/>
 	</property>
 </configuration>

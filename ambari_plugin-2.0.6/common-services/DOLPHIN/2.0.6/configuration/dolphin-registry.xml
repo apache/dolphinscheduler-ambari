@@ -31,7 +31,7 @@
     </property>
     <property>
         <name>registry.namespace</name>
-        <value>dolphinscheduler</value>
+        <value>dolphinscheduler-2.0.6</value>
         <description>
         </description>
         <on-ambari-upgrade add="true"/>
